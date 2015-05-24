@@ -1,0 +1,36 @@
+Source: redshift
+Section: x11
+Priority: extra
+Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
+Uploaders: Franziska Lichtblau <rhalina@old-forest.org>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev (>= 20100122.1~), pkg-config (>= 0.25), dpkg-dev (>= 1.16.1~), libxcb-randr0-dev, libxxf86vm-dev, libgconf2-dev, python3, libxext-dev, libgeoclue-dev, libdrm-dev, intltool
+XS-Python-Version: >= 3.0
+Standards-Version: 3.9.3 
+Vcs-Git: git://anonscm.debian.org/users/rhalina-guest/redshift.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/rhalina-guest/redshift.git
+Homepage: http://jonls.dk/redshift/
+
+Package: redshift
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Adjusts the color temperature of your screen
+ The color temperature is set according to the position of the sun. A
+ different color temperature is set during night and daytime. During
+ twilight and early morning, the color temperature transitions smoothly
+ from night to daytime temperature to allow your eyes to slowly
+ adapt.
+ .
+ This package provides the base program.
+
+Package: gtk-redshift
+Architecture: all
+Depends: redshift (>= ${source:Version}), ${misc:Depends}, ${python3:Depends}, python-gtk2, python3-xdg, gir1.2-appindicator3-0.1, python3-gi
+Recommends: at-spi2-core
+Description: Adjusts the color temperature of your screen with GTK+ integration
+ The color temperature is set according to the position of the sun. A
+ different color temperature is set during night and daytime. During
+ twilight and early morning, the color temperature transitions smoothly
+ from night to daytime temperature to allow your eyes to slowly
+ adapt.
+ .
+ This package provides GTK+ integration.

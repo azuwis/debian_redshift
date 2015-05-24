@@ -1,0 +1,9 @@
+Autostart of gtk-redshift
+-------------------------
+
+Autostart was removed from Debian package because of violation of 'Desktop Application
+Autostart Specification' (see bug #619699). If you want gtk-redshift autostarted please
+configure this in your specific desktop environment (e.g. by placing
+/usr/share/applications/gtk-redshift.desktop in
+$HOME/$XDG_CONFIG_HOME/autostart/
+(usually defaults to $HOME/.config/autostart).

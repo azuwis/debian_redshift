@@ -1,0 +1,5 @@
+?package(gtk-redshift): \
+	needs="X11" \
+	section="Games/Toys" \
+	title="Redshift" \
+	command="redshift-gtk"

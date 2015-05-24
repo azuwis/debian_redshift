@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+export DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+%:
+	dh $@ --with autotools_dev --with python3
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-randr --enable-vidmode --enable-geoclue2
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_auto_install:
+	dh_auto_install

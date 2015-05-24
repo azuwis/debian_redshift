@@ -1,0 +1,59 @@
+.TH REDSHIFT "5" "June 2012" "redshift 1.7" "REDSHIFT.CONF(5)"
+.SH NAME
+redshift.conf - configuration file for redshift and gtk-redshift
+.SH DESCRIPTION
+A configuration file with the name `redshift.conf' can optionally be
+placed in `~/.config/'. The file has standard INI format. General
+program options are placed under the `redshift' header, while options
+for location providers and adjustment methods are placed under a
+header with the name of that provider or method. General options are:
+.TP
+\fBtemp\-day\fR = integer
+Daytime temperature
+.TP
+\fBtemp\-night\fR = integer
+Night temperature
+.TP
+\fBtransition\fR = 0 or 1
+Disable or enable transitions
+.TP
+\fBbrightness\-day\fR = 0.1\-1.0
+Screen brightness at daytime
+.TP
+\fBbrightness\-night\fR = 0.1\-1.0
+Screen brightness at night
+.TP
+\fBgamma\fR = R:G:B
+Gamma adjustment to apply
+.TP
+\fBadjustment\-method\fR = name
+Select adjustment method. Options for the adjustment method can be
+given under the configuration file heading of the same name.
+.TP
+\fBlocation\-provider\fR = name
+Select location provider. Options for the location provider can be
+given under the configuration file heading of the same name.
+.PP
+Options for location providers and adjustment methods can be found in
+the help output of the providers and methods.
+.SH EXAMPLE
+Example for Copenhagen, Denmark:
+.IP
+\fB$\fR redshift \-l 55.7:12.6 \-t 5700:3600 \-g 0.8 \-m vidmode \-v
+.PP
+An example configuration file with the same effect as the above
+command line:
+.IP
+.nf
+[\fBredshift\fR]
+temp\-day=5700
+temp\-night=3600
+gamma=0.8
+adjustment\-method=vidmode
+location\-provider=manual
+.SH AUTHOR
+redshift was written by Martin Koelewijn and Jon Lund Steffensen.
+.PP
+This manual page was created by Franziska Lichtblau
+<rhalina@old-forest.org>
+for the Debian project (and may be used by others).
