@@ -1,3 +1,11 @@
+redshift (1.10-1+brew1) unstable; urgency=medium
+
+  * debian/patches/: colorramp-Use-supplied-gamma-ramps-as-initial-value
+  * debian/patches/: vidmode-Add-preserve-option-to-VidMode-method
+  * debian/patches/: randr-Add-preserve-option-to-RandR-method
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Sun, 21 Jun 2015 15:27:27 +0800
+
 redshift (1.10-1) unstable; urgency=medium
 
   * [56e5b64] Imported Upstream version 1.10 (Closes: #786638)
