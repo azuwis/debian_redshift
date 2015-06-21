@@ -1,3 +1,4 @@
 remove_autostart.patch
 0002-colorramp-Use-supplied-gamma-ramps-as-initial-value.patch
 0003-vidmode-Add-preserve-option-to-VidMode-method.patch
+0004-randr-Add-preserve-option-to-RandR-method.patch
